@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; Charset=UTF-8">
-<script type="text/javascript" src="jquery-1.12.0.min.js"></script>
 	<link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -85,67 +84,17 @@
 		</div>
 		<div id="content"></div>
 		<footer>
-			<div class="nav screen"></div>
+			<div class="nav screen active"></div>
 			<div class="nav details"></div>
 			<div class="nav description"></div>
 			<div class="nav comments"></div>
 		</footer>
 		
 	</div>
-	<script>
-		$(document).ready(function(){
-		
-			$('.screen').click(function(){
-				$.ajax({
-					url: "screen.html",
-					cache: false,
-					success: function(html){
-						$("#content").html(html);
 
-					}
-				});
-				$('div.main').html('<h1> Screenshots </h1>');
-				$('div.parent').html(' ');
-			});
-			
-			$('.details').click(function(){
-				$.ajax({
-					url: "details.html",
-					cache: false,
-					success: function(html){
-						$("#content").html(html);
-					}
-				});
-				$('div.main').html('<h1> Details </h1>');
-				$('div.parent').html(' ');
-			});
-
-			$('.description').click(function(){
-				$.ajax({
-					url: "description.html",
-					cache: false,
-					success: function(html){
-						$("#content").html(html);
-
-					}
-				});
-				$('div.main').html('<h1> Description </h1>');
-				$('div.parent').html(' ');
-			});
-
-			$('.comments').click(function(){
-				$.ajax({
-					url: "comments.html",
-					cache: false,
-					success: function(html){
-						$("#content").html(html);
-					}
-				});
-				$('div.main').html('<h1> Comments </h1>');
-			});
-			
-		});
-	</script>
+	<script type="text/javascript" src="jquery-1.12.0.min.js"></script>
+	<script src="js/lib.js"></script>
+	<script src="js/main.js"></script>
 
 </body>
 </html>

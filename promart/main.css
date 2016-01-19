@@ -178,7 +178,10 @@ footer {
 	background-repeat: no-repeat;
 }
 
-.screen:hover, .details:hover, .description:hover {
+.screen:hover, 
+.details:hover, 
+.description:hover, 
+.active {
 	background-position: 0 -87px;
 }
 
@@ -209,5 +212,4 @@ footer {
 .comments:active {
 	background-position: 0 -87px;
 }
-
 
