@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; Charset=UTF-8">
+<script type="text/javascript" src="jquery-1.12.0.min.js"></script>
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<div class="container">
+		<header>
+			<section class="header">
+				<div class="head back"></div>
+				<div class="head main">
+					<h1>Comments</h1>
+				</div>
+				<div class="head view"></div>
+			</section>
+			<section class="second-header">
+				<div class="header-content minion"> <img src="img/minion.png" alt=""></div>
+				<div class="header-content txt" >
+					<p>Super soft name, very long</p>
+					<span>By CloneFish</span>
+				</div>
+				<div class="header-content buttons">
+					<div class="sale"></div>
+					<div class="new"></div>
+				</div>
+			</section>
+		</header>
+		<div class="parent">
+			<section class="content">
+				<div class="comment">
+					<p>by Bor'ka</p>
+					<p>Vot eto prekol</p>
+					<p>Kuplu stopudovchenko!</p>
+				</div>
+				<div class="comment">
+					<p>by Bor'ka</p>
+					<p>Vot eto prekol</p>
+					<p>Kuplu stopudovchenko!</p>
+				</div>
+				<div class="comment">
+					<p>by Bor'ka</p>
+					<p>Vot eto prekol</p>
+					<p>Kuplu stopudovchenko!</p>
+				</div>
+				<div class="comment">
+					<p>by Bor'ka</p>
+					<p>Vot eto prekol</p>
+					<p>Kuplu stopudovchenko!</p>
+				</div>
+				<div class="comment">
+					<p>by Bor'ka</p>
+					<p>Vot eto prekol</p>
+					<p>Kuplu stopudovchenko!</p>
+				</div>
+				<div class="comment">
+					<p>by Bor'ka</p>
+					<p>Vot eto prekol</p>
+					<p>Kuplu stopudovchenko!</p>
+				</div>
+				<div class="comment">
+					<p>by Bor'ka</p>
+					<p>Vot eto prekol</p>
+					<p>Kuplu stopudovchenko!</p>
+				</div>
+				<div class="comment">
+					<p>by Bor'ka</p>
+					<p>Vot eto prekol</p>
+					<p>Kuplu stopudovchenko!</p>
+				</div>
+				<div class="comment">
+					<p>by Bor'ka</p>
+					<p>Vot eto prekol</p>
+					<p>Kuplu stopudovchenko!</p>
+				</div>
+				<div class="comment">
+					<p>by Bor'ka</p>
+					<p>Vot eto prekol</p>
+					<p>Kuplu stopudovchenko!</p>
+				</div>
+				
+			</section>
+			
+		</div>
+		<div id="content"></div>
+		<footer>
+			<div class="nav screen"></div>
+			<div class="nav details"></div>
+			<div class="nav description"></div>
+			<div class="nav comments"></div>
+		</footer>
+		
+	</div>
+	<script>
+		$(document).ready(function(){
+		
+			$('.screen').click(function(){
+				$.ajax({
+					url: "screen.html",
+					cache: false,
+					success: function(html){
+						$("#content").html(html);
+
+					}
+				});
+				$('div.main').html('<h1> Screenshots </h1>');
+				$('div.parent').html(' ');
+			});
+			
+			$('.details').click(function(){
+				$.ajax({
+					url: "details.html",
+					cache: false,
+					success: function(html){
+						$("#content").html(html);
+					}
+				});
+				$('div.main').html('<h1> Details </h1>');
+				$('div.parent').html(' ');
+			});
+
+			$('.description').click(function(){
+				$.ajax({
+					url: "description.html",
+					cache: false,
+					success: function(html){
+						$("#content").html(html);
+
+					}
+				});
+				$('div.main').html('<h1> Description </h1>');
+				$('div.parent').html(' ');
+			});
+
+			$('.comments').click(function(){
+				$.ajax({
+					url: "comments.html",
+					cache: false,
+					success: function(html){
+						$("#content").html(html);
+					}
+				});
+				$('div.main').html('<h1> Comments </h1>');
+			});
+			
+		});
+	</script>
+
+</body>
+</html>
